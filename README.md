@@ -84,8 +84,8 @@ the program will provide a raw results file only (results.txt - see an example b
   
 ####4) Input file example
 
-    ((J:1.0,A:1.0):1.0,((C:1.0,E:1.0):10.0,(G:1.0,(F:1.0,H:1.0):1.0):1.0):1.0);
-    ((J:1.0,F:1.0):1.0,((C:1.0,G:1.0):1.0,(E:1.0,(A:1.0,H:1.0):1.0):1.0):1.0);
+    ((J:1.0,A:1.0):1.0,((C:1.0,E:1.0):10.0,(G:1.0,(F:1.0,H:1.0):1.0):1.0):1.0); |-> species tree
+    ((J:1.0,F:1.0):1.0,((C:1.0,G:1.0):1.0,(E:1.0,(A:1.0,H:1.0):1.0):1.0):1.0);  |-> gene tree
 
  
 ####5) How to specify species and gene tree root (speciesRoot and geneRoot files)
