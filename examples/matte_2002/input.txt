@@ -1,0 +1,3 @@
+(((A.pernix:1.0,S.solfataricus:1.0):1.0,P.aerophilum:1.0):10.0,(((P.abyssi:1.0,P.horikoshii:1.0):1.0,P.furiosus:1.0):1.0,((M.jannaschii:1.0,M.thermoaut:1.0):1.0,((T.acidophilum:1.0,F.acidarinanus:1.0):1.0,(((Halobacterium.sp:1.0,H.marismortui:1.0):1.0,M.barkeri:1.0):1.0,A.fulgidus:1.0):1.0):1.0):1.0):1.0);
+
+(((((P.aerophilum:1.0,S.solfataricus:1.0):1.0,A.pernix:1.0):1.0,T.acidophilum:1.0):1.0,F.acidarinanus:1.0):10.0,(((P.abyssi:1.0,P.furiosus:1.0):1.0,P.horikoshii:1.0):1.0,(((((Halobacterium.sp:1.0, H.marismortui:1.0):1.0,M.thermoaut:1.0):1.0,M.barkeri:1.0):1.0,A.fulgidus:1.0):1.0,M.jannaschii:1.0):1.0):1.0);
