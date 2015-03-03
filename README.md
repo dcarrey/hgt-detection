@@ -1,4 +1,5 @@
-**HGT Detection 3.4 - March, 2012**           
+HGT Detection 3.4 - March, 2012
+--
       
 Authors     :       Alix Boc, Alpha Boubacar Diallo and Vladimir Makarenkov (Universite du Quebec a Montreal)
 Description :       This program computes a unique scenario of horizontal gene transfers (HGTs) for
