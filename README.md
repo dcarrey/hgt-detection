@@ -118,21 +118,49 @@ An example of a FORMATTED OUTPUT file:
     
     Gene Tree :	
     ((J:1.0,F:1.0):1.0,((C:1.0,G:1.0):1.0,(E:1.0,(A:1.0,H:1.0):1.0):1.0):1.0);											
-    =============================================									    = Criteria values before the computation 									
-    =============================================									    Robinson and Foulds distance (RF) = 10									    Least-squares coefficient(LS)     = 30869.737									    Bipartition dissimilarity         = 11.0									
+    =============================================									    
+    = Criteria values before the computation 									
+    =============================================									    
+    Robinson and Foulds distance (RF) = 10									    
+    Least-squares coefficient(LS)     = 30869.737									      
+    Bipartition dissimilarity         = 11.0									
     
     ================================================================						
     | Iteration #1 : 3 HGTs were found										   
     ================================================================						
-    |															    | HGT 1 / 3 												    | From subtree (H) to subtree (A)											    | RF = 8 , LS = 30789.952 , BD = 6.0									    | 															    | HGT 2 / 3 												    | From subtree (C) to subtree (G)											    | RF = 8 , LS = 29533.007 , BD = 8.0									    | 															    | HGT 3 / 3 												    | From subtree (F) to subtree (J)											    | RF = 8 , LS = 29671.656 , BD = 7.5									    | 															    | ================================================================						
+    |															    
+    | HGT 1 / 3 												    
+    | From subtree (H) to subtree (A)											    
+    | RF = 8 , LS = 30789.952 , BD = 6.0									    
+    | 															    
+    | HGT 2 / 3 												    
+    | From subtree (C) to subtree (G)											    
+    | RF = 8 , LS = 29533.007 , BD = 8.0									    
+    | 															    
+    | HGT 3 / 3 												    
+    | From subtree (F) to subtree (J)											    
+    | RF = 8 , LS = 29671.656 , BD = 7.5									    
+    | 															    
+    | ================================================================						
     | After this iteration the criteria values are as follows :							
-    | RF = 4 , LS = 10367.302 , BD = 2.5										    | ================================================================						
-    |															    | ================================================================						
-    | Iteration #2 : 1 HGT was found											    | ================================================================						
-    |															    | HGT 1 / 1 												    | From subtree (E) to subtree (A, H)										    | RF = 0 , LS = 6807.857 , BD = 0.0										    | 															    | ================================================================						
+    | RF = 4 , LS = 10367.302 , BD = 2.5										    
+    | ================================================================						
+    |															    
+    | ================================================================						
+    | Iteration #2 : 1 HGT was found											    
+    | ================================================================						
+    |															    
+    | HGT 1 / 1 												    
+    | From subtree (E) to subtree (A, H)										    
+    | RF = 0 , LS = 6807.857 , BD = 0.0										    
+    | 															    
+    | ================================================================						
     | After this iteration the criteria values are as follows :							
-    | RF = 0 , LS = 0.000 , BD = 0.0											    | ================================================================						
-    | 															    | Total number of HGTs : 4 											    -------------------------------------------------------------------
+    | RF = 0 , LS = 0.000 , BD = 0.0											    
+    | ================================================================						
+    | 															    
+    | Total number of HGTs : 4 
+    -------------------------------------------------------------------
 
 
 An example of a RAW OUTPUT file (e.g., it can be used in simulations):
