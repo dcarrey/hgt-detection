@@ -85,7 +85,7 @@ the program will provide a raw results file only (results.txt - see an example b
 ####4) Input file example
 
     ((J:1.0,A:1.0):1.0,((C:1.0,E:1.0):10.0,(G:1.0,(F:1.0,H:1.0):1.0):1.0):1.0);
-((J:1.0,F:1.0):1.0,((C:1.0,G:1.0):1.0,(E:1.0,(A:1.0,H:1.0):1.0):1.0):1.0);
+    ((J:1.0,F:1.0):1.0,((C:1.0,G:1.0):1.0,(E:1.0,(A:1.0,H:1.0):1.0):1.0):1.0);
 
  
 ####5) How to specify species and gene tree root (speciesRoot and geneRoot files)
@@ -113,91 +113,63 @@ An example of a FORMATTED OUTPUT file:
     Criterion            :bipartition dissimilarity						
     Bootstrap            :no								
     
-    Species tree :																		
-	((J:1.0,A:1.0):1.0,((C:1.0,E:1.0):10.0,(G:1.0,(F:1.0,H:1.0):1.0):1.0):1.0);			
-	
-	Gene Tree :																			
-	((J:1.0,F:1.0):1.0,((C:1.0,G:1.0):1.0,(E:1.0,(A:1.0,H:1.0):1.0):1.0):1.0);											
-    =============================================									
-	= Criteria values before the computation 									
-	=============================================										
-	Robinson and Foulds distance (RF) = 10												
-	Least-squares coefficient(LS)     = 30869.737										
-	Bipartition dissimilarity         = 11.0												
-																							
-	 ================================================================						
-	| Iteration #1 : 3 HGTs were found													 ================================================================						
-	 | |																					
-	 | | HGT 1 / 3 																			
-	 | | From subtree (H) to subtree (A)													
-	 | | RF = 8 , LS = 30789.952 , BD = 6.0													
-	 | | 																					
-	 | | HGT 2 / 3 																			
-	 | | From subtree (C) to subtree (G)													
-	 | | RF = 8 , LS = 29533.007 , BD = 8.0													
-	 | | 																					
-	 | | HGT 3 / 3 																			
-	 | | From subtree (F) to subtree (J)													
-	 | | RF = 8 , LS = 29671.656 , BD = 7.5													
-	 | | 																					
-	 | ================================================================						
-	 | | After this iteration the criteria values are as follows :							
-	 | | RF = 4 , LS = 10367.302 , BD = 2.5													
-	 | ================================================================						
-	 |																						
-	 | ================================================================						
-	 | | Iteration #2 : 1 HGT was found														
-	 | ================================================================						
-	 | |																					
-	 | | HGT 1 / 1 																			
-	 | | From subtree (E) to subtree (A, H)														
-	 | | RF = 0 , LS = 6807.857 , BD = 0.0													
-	 | | 																					
-	 | ================================================================						
-	 | | After this iteration the criteria values are as follows :							
-	 | | RF = 0 , LS = 0.000 , BD = 0.0														
-	 | ================================================================						
-	 | 																						
-	 | Total number of HGTs : 4 															
-	 -------------------------------------------------------------------
+    Species tree :
+    ((J:1.0,A:1.0):1.0,((C:1.0,E:1.0):10.0,(G:1.0,(F:1.0,H:1.0):1.0):1.0):1.0);
+    
+    Gene Tree :	
+    ((J:1.0,F:1.0):1.0,((C:1.0,G:1.0):1.0,(E:1.0,(A:1.0,H:1.0):1.0):1.0):1.0);											
+    =============================================									    = Criteria values before the computation 									
+    =============================================									    Robinson and Foulds distance (RF) = 10									    Least-squares coefficient(LS)     = 30869.737									    Bipartition dissimilarity         = 11.0									
+    
+    ================================================================						
+    | Iteration #1 : 3 HGTs were found										   
+    ================================================================						
+    |															    | HGT 1 / 3 												    | From subtree (H) to subtree (A)											    | RF = 8 , LS = 30789.952 , BD = 6.0									    | 															    | HGT 2 / 3 												    | From subtree (C) to subtree (G)											    | RF = 8 , LS = 29533.007 , BD = 8.0									    | 															    | HGT 3 / 3 												    | From subtree (F) to subtree (J)											    | RF = 8 , LS = 29671.656 , BD = 7.5									    | 															    | ================================================================						
+    | After this iteration the criteria values are as follows :							
+    | RF = 4 , LS = 10367.302 , BD = 2.5										    | ================================================================						
+    |															    | ================================================================						
+    | Iteration #2 : 1 HGT was found											    | ================================================================						
+    |															    | HGT 1 / 1 												    | From subtree (E) to subtree (A, H)										    | RF = 0 , LS = 6807.857 , BD = 0.0										    | 															    | ================================================================						
+    | After this iteration the criteria values are as follows :							
+    | RF = 0 , LS = 0.000 , BD = 0.0											    | ================================================================						
+    | 															    | Total number of HGTs : 4 											    -------------------------------------------------------------------
 
 
 An example of a RAW OUTPUT file (e.g., it can be used in simulations):
 
- ----------------------------------------------------
- | 10,30869.736516,11.000000                        |  -> RF, LS and BD values
- | mode=multicheck                                  |  -> selected mode
- | 3                                                |  -> number of HGT(s) found at the current iteration
- | HGT 1 / 3                                        |  -> first HGT found at the current iteration
- | H                                                |  -> list of species of the source subtree
- | A                                                |  -> list of species of the recepient subtree
- | From branch H--12 to branch A--9                 |  -> two species tree branches affected by this HGT
- | RF = 8 , LS = 30789.952463 , BD = 6.000000       |  -> criteria values (RF, LS and BD) after this HGT	
- | HGT 2 / 3                                        |  -> .....
- | C                                                |
- | G                                                |
- | From branch C--10 to branch G--13                |
- | RF = 8 , LS = 29533.006815 , BD = 8.000000       |
- | HGT 3 / 3                                        |
- | F                                                |
- | J                                                |
- | From branch F--12 to branch 9--J                 |
- | RF = 8 , LS = 29671.655834 , BD = 7.500000       |
- | RF = 4 , LS = 10367.301891 , BD = 2.500000       |  -> criteria values (RF, LS and BD) after the 3 HGTs above	
- | 1                                                |
- | HGT 1 / 1                                        |
- | E                                                |
- | A H                                              |
- | From branch E--10 to branch H--12                |
- | RF = 0 , LS = 6807.856562 , BD = 0.000000        |
- | RF = 0 , LS = 0.000000 , BD = 0.000000           |
- | Stat= 4 0                                        | -> number of regular HGT(s) found (followed by the number of trivial HGT(s), if any)
- ----------------------------------------------------
+    ----------------------------------------------------
+    | 10,30869.736516,11.000000                        |  -> RF, LS and BD values
+    | mode=multicheck                                  |  -> selected mode
+    | 3                                                |  -> number of HGT(s) found at the current iteration
+    | HGT 1 / 3                                        |  -> first HGT found at the current iteration
+    | H                                                |  -> list of species of the source subtree
+    | A                                                |  -> list of species of the recepient subtree
+    | From branch H--12 to branch A--9                 |  -> two species tree branches affected by this HGT
+    | RF = 8 , LS = 30789.952463 , BD = 6.000000       |  -> criteria values (RF, LS and BD) after this HGT	
+    | HGT 2 / 3                                        |  -> .....
+    | C                                                |
+    | G                                                |
+    | From branch C--10 to branch G--13                |
+    | RF = 8 , LS = 29533.006815 , BD = 8.000000       |
+    | HGT 3 / 3                                        |
+    | F                                                |
+    | J                                                |
+    | From branch F--12 to branch 9--J                 |
+    | RF = 8 , LS = 29671.655834 , BD = 7.500000       |
+    | RF = 4 , LS = 10367.301891 , BD = 2.500000       |  -> criteria values (RF, LS and BD) after the 3 HGTs above
+    | 1                                                |
+    | HGT 1 / 1                                        |
+    | E                                                |
+    | A H                                              |
+    | From branch E--10 to branch H--12                |
+    | RF = 0 , LS = 6807.856562 , BD = 0.000000        |
+    | RF = 0 , LS = 0.000000 , BD = 0.000000           |
+    | Stat= 4 0                                        | -> number of regular HGT(s) found (followed by the number of trivial HGT(s), if any)
+    ----------------------------------------------------
 
  
- 7) Important notes:
- ===================
+####7) Important notes
 
-If the branch specified (as a root branch) in the speciesRoot or geneRoot file is not found, the branch closest to your selection will be used to root the tree(s)
-If a species is present in the species tree and absent in the gene tree (or vice versa), then this species will be ruled out from the computation
+* If the branch specified (as a root branch) in the speciesRoot or geneRoot file is not found, the branch closest to your selection will be used to root the tree(s)
+* If a species is present in the species tree and absent in the gene tree (or vice versa), then this species will be ruled out from the computation
  
