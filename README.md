@@ -1,10 +1,5 @@
 HGT Detection 3.4 - March, 2012
 --
-      
-Authors     :       Alix Boc, Alpha Boubacar Diallo and Vladimir Makarenkov (Universite du Quebec a Montreal)
-Description :       This program computes a unique scenario of horizontal gene transfers (HGTs) for
-                    the given pair of species and gene phylogenetic trees  
-Graphical version : The graphical version of this program is available at www.trex.uqam.ca (option HGT Detection)
 
 ###Citation
 
