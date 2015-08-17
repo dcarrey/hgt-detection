@@ -613,7 +613,7 @@ int main(int nargc,char **argv){
 				computeCriteria(SpeciesTree.ADD,GeneTree.ADD,SpeciesTree.size,&aCrit,SpeciesTree.LONGUEUR,SpeciesTree.ARETE,GeneTree.LONGUEUR,GeneTree.ARETE);
 						
 				printf("\n\nCriteria values after this step :");
-				printf("\nRF = %d | LS = %1.2lf | BD = %1.2lf\n",aCrit.RF,aCrit.LS,aCrit.BD,aCrit.QD);	 
+				printf("\nRF = %d | LS = %1.2lf | BD = %1.2lf\n",aCrit.RF,aCrit.LS,aCrit.BD);	 
 
 				if(first==1)
 				{
@@ -694,10 +694,10 @@ int main(int nargc,char **argv){
 					
 					expandBestHGT(bestHGTRed[cpt_hgt],&bestHGT[cpt_hgt],aMap,DTSpecies,SpeciesTree);
 					bestHGT[cpt_hgt].trivial = 0;
-					if((cpt_hgt,bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_A) || 
-						(cpt_hgt,bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_B) || 
-						(cpt_hgt,bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_A) || 
-						(cpt_hgt,bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_B))	
+					if((bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_A) || 
+						(bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_B) || 
+						(bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_A) || 
+						(bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_B))	
 					{
 						printf("\n je rentre 1");
 						bestHGT[cpt_hgt].trivial = 1;
@@ -742,7 +742,7 @@ int main(int nargc,char **argv){
 					loadCriteria(aCrit,&(bestHGT[cpt_hgt]));
 					bestHGT[cpt_hgt].valide = val;
 					printf("\n\nCriteria values after this step :");
-					printf("\nRF = %d | LS = %1.2lf | BD = %1.2lf\n",aCrit.RF,aCrit.LS,aCrit.BD,aCrit.QD);	 
+					printf("\nRF = %d | LS = %1.2lf | BD = %1.2lf\n",aCrit.RF,aCrit.LS,aCrit.BD);	 
 
 					multicheckTab[imc].LS = aCrit.LS;
 					multicheckTab[imc].RF = aCrit.RF;
@@ -752,7 +752,7 @@ int main(int nargc,char **argv){
 					if(strcmp(param.version,"consol")==0)
 					{
 						printf("\nHGT #%d %d--%d -> %d--%d",cpt_hgt,bestHGT[cpt_hgt].source_A,bestHGT[cpt_hgt].source_B,bestHGT[cpt_hgt].dest_A,bestHGT[cpt_hgt].dest_B);
-						printf("\nRF = %d, LS = %lf, BD = %lf \n",aCrit.RF,aCrit.LS,aCrit.BD,aCrit.QD);	 
+						printf("\nRF = %d, LS = %lf, BD = %lf \n",aCrit.RF,aCrit.LS,aCrit.BD);	 
 					} 
 					if(bestHGT[cpt_hgt].crit.RF == 0) break;// || bestHGT[cpt_hgt].crit.LS < epsilon) break;
 
@@ -788,10 +788,10 @@ int main(int nargc,char **argv){
 				
 				expandBestHGT(bestHGTRed[cpt_hgt],&bestHGT[cpt_hgt],aMap,DTSpecies,SpeciesTree);
               	bestHGT[cpt_hgt].trivial = 0;
-          		if((cpt_hgt,bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_A) || 
-             		(cpt_hgt,bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_B) || 
-             		(cpt_hgt,bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_A) || 
-             		(cpt_hgt,bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_B))
+          		if((bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_A) || 
+             		(bestHGT[cpt_hgt].source_A == bestHGT[cpt_hgt].dest_B) || 
+             		(bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_A) || 
+             		(bestHGT[cpt_hgt].source_B == bestHGT[cpt_hgt].dest_B))
 				{
 					printf("\n je rentre 2");
               		bestHGT[cpt_hgt].trivial = 1;
@@ -833,7 +833,7 @@ int main(int nargc,char **argv){
 				loadCriteria(aCrit,&(bestHGT[cpt_hgt]));
 				bestHGT[cpt_hgt].valide = val;
 				printf("\n\nCriteria values after this step :");
-				printf("\nRF = %d | LS = %1.2lf | BD = %1.2lf\n",aCrit.RF,aCrit.LS,aCrit.BD,aCrit.QD);	 
+				printf("\nRF = %d | LS = %1.2lf | BD = %1.2lf\n",aCrit.RF,aCrit.LS,aCrit.BD);	 
 
 				multicheckTab[imc].LS = aCrit.LS;
 				multicheckTab[imc].RF = aCrit.RF;
@@ -843,7 +843,7 @@ int main(int nargc,char **argv){
 				
 				if(strcmp(param.version,"consol")==0){
 					printf("\nHGT #%d %d--%d -> %d--%d",cpt_hgt,bestHGT[cpt_hgt].source_A,bestHGT[cpt_hgt].source_B,bestHGT[cpt_hgt].dest_A,bestHGT[cpt_hgt].dest_B);
-					printf("\nRF = %d, LS = %lf, BD = %lf\n",aCrit.RF,aCrit.LS,aCrit.BD,aCrit.QD);	 
+					printf("\nRF = %d, LS = %lf, BD = %lf\n",aCrit.RF,aCrit.LS,aCrit.BD);	 
 				}
 				
 				if(cpt_hgt >= param.nbhgt) break;

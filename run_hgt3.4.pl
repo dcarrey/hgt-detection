@@ -19,7 +19,7 @@ my $outputfile="output.txt";
 my $bootstrap = "no";
 my $consensus = "no";
 my $cons=50;
-my $path = "./"; #"./";
+my $path = "./";
 my $viewtree="no";
 my @tmp_tab;
 my @tmp_tab_init;
@@ -808,5 +808,5 @@ sub print_help{
 }
 
 sub clean(){
-	`rm -rf errorFile.txt *~ inputfileFormated.txt input_.txt tmp_input.txt`;
+	`rm -rf errorFile.txt *~ inputfileFormated.txt input_.txt tmp_input.txt geneRoot* speciesRoot* nomorehgt.txt res_sim.txt`;
 }
