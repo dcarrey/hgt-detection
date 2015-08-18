@@ -353,7 +353,7 @@ if( ($generoot eq "file") && ( ! -e $generootfile && ! -e $generootfileBranches)
 	  print STDOUT "\n\nRUN_HGT : An error has occured during computation. Check the log file ($log_file) for more details ! ";
 	  exit -1;
     }
-	print STDOUT "formatting results...";
+	print STDOUT "\nformatting results...";
 	
     if((($i == 2) && ($viewtree eq "yes")) || (($i == 1) && ($viewtree eq "yes"))){
        exit_program(0,$return_file,"RUN_HGT : We just want to see the input tress");
