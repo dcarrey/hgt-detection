@@ -110,7 +110,7 @@ foreach my $elt (@ARGV){
 my $inputfile_bkp = $inputfile;
 $inputfile    = "$path" . "$inputfile";
 $outputfile = "$path" . "$outputfile";
-$cmd          = "./" . $cmd;
+$cmd          = "/Users/boc_a/hgt-detection/" . $cmd;
 #$cmd          = "usagers/" . $cmd;
 my $results   = "$path" . "results.txt";
 my $firstResults   = "$path" . "firstResults.txt";

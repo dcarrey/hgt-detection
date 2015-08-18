@@ -2,12 +2,7 @@
 //============================ DEFINITION DES FONCTIONS =============================
 //===================================================================================
 
-/*int global_cpt1 = 0;
-int global_cpt2 = 0;
-int global_cpt3 = 0;
-int global_cpt4 = 0;
-int global_cpt5 = 0;
-*/
+
 void deleteFiles(){
 	
 }
@@ -42,10 +37,7 @@ void addLeafAndUpdate(struct InputTree *aTree, int choix){
 	int n = aTree->size;
 	int i,j;
 
-/*	for(i=1;i<=2*n-3-aTree->kt;i++)
-		printf("\n%d-%d -> %lf",aTree->ARETE[2*i-1],aTree->ARETE[2*i-2],aTree->LONGUEUR[i-1]);
-	printf("\n");
-*/
+
 	for(i=1;i<=2*n-3-aTree->kt;i++){
 		if(aTree->ARETE[2*i-1] > n) aTree->ARETE[2*i-1] += 1 ;
 		if(aTree->ARETE[2*i-2] > n) aTree->ARETE[2*i-2] += 1 ;
@@ -67,18 +59,10 @@ void addLeafAndUpdate(struct InputTree *aTree, int choix){
 
 	aTree->size = aTree->size+1;
 
-	/*for(i=1;i<=2*aTree->size-3-aTree->kt;i++)
-		printf("\n%d-%d -> %lf",aTree->ARETE[2*i-1],aTree->ARETE[2*i-2],aTree->LONGUEUR[i-1]);*/
 
 	loadAdjacenceMatrix(aTree->Adjacence,aTree->ARETE, aTree->LONGUEUR,n+1,aTree->kt);
-	/*for(i=1;i<=2*aTree->size-2-aTree->kt;i++){
-		printf("\n");
-		for(j=1;j<=2*aTree->size-2-aTree->kt;j++)
-			printf("%lf ",aTree->Adjacence[i][j]);
-	}
-	printf("\n");*/
+
 	Floyd(aTree->Adjacence,aTree->ADD,aTree->Input,n+1,aTree->kt);//5eme fois
-//  global_cpt5++;
 
 	strcpy(aTree->SpeciesName[aTree->size],"Root");
 
@@ -740,37 +724,12 @@ void computeCriteria(double ** Matrix1, double ** Matrix2, int size,struct CRITE
 	{
 		for (j=i+1;j<=size;j++){
 			LS=LS + (Matrix1[i][j]-Matrix2[i][j])*(Matrix1[i][j]-Matrix2[i][j]);
-			if(LS > INFINI){
-					//printf("\n\n %lf,%lf (i=%d,j=%d,size=%d)",Matrix1[i][j],Matrix2[i][j],i,j,size);
-					//getchar();
-			}
 		}
 	}
-	//LS = sqrt(LS);
 
 	//= Bipartition Distance
 	BD = BipartitionDistance(aCrit->B,aCrit->BI,size);
 	
-	//= Quartet Distance
-	//= le calcul de QD necessite la creation de 2 fichiers d'arbres t1 et t2
-	//= sinon la distance sera de -1 (distance non calculee)
-/*	if(L1 != NULL){
-		if(size > 3){
-			SAVEASNewick(L1,A1,size,"t1");
-			SAVEASNewick(L2,A2,size,"t2");
-			system("./quartetDistance.sh");
-			FILE *out = fopen("t3","r");
-			fscanf(out,"%d",&QD);
-			fclose(out);
-		}
-		else{
-			QD=0;
-		}
-	}
-	else{
-		QD = (int)INFINI;
-	}
-*/	
 	aCrit->LS = LS;
 	aCrit->BD = BD;
 	aCrit->RF = RF;
@@ -979,36 +938,9 @@ void applyHGT(double**ref,struct InputTree * aTree,int i,int j){
       }
     }
   	
-	
-	//printf("\ndemi-branche = %lf",tailleBrancheSource);
 	kt = aTree->kt;
-	//printf("\navant load");
 	
-  //ComputeNewDistances(DIST,aTree->ADD,aTree->size,aTree->kt,nouveauNoeud,tailleBrancheSource,tailleTransfert,Ssup,Sinf,Sdestination);
-  //approx_arb(ref,aTree->ADD,aTree->ADD,aTree->W,&iternumber,aTree->ARETE,aTree->LONGUEUR,1,&kt,0,aTree->size);
-	loadAdjacenceMatrix(aTree->Adjacence,aTree->ARETE, aTree->LONGUEUR,aTree->size, aTree->kt);
-	/*for(int i=1;i<=2*(aTree->size)-3-aTree->kt;i++){
-		aTree->Adjacence[aTree->ARETE[2*i-1]][aTree->ARETE[2*i-2]] = aTree->Adjacence[aTree->ARETE[2*i-2]][aTree->ARETE[2*i-1]] = aTree->LONGUEUR[i-1];
-	}*/
-	//printf("\navant approx");
- //Floyd(aTree->Adjacence,aTree->ADD,aTree->size,aTree->kt);
-
-/*
-printf("\n\nFin de ApplyHGT : %d,kt=%d\n",aTree->size,aTree->kt);
-	for(i=1;i<=2*aTree->size-2-aTree->kt;i++){
-		printf("\n%d ",i);
-		for(j=1;j<=2*aTree->size-2-aTree->kt;j++){
-			printf("%.2lf ",aTree->ADD[i][j]);
-		}
-	}*/
-	//printf("\nfin apply");
-
-  
-  //== Liste des noeuds sous
-
-
-
-
+  loadAdjacenceMatrix(aTree->Adjacence,aTree->ARETE, aTree->LONGUEUR,aTree->size, aTree->kt);
 
 	for(p=0;p<2*aTree->size;p++)
 		free(DIST[p]);
@@ -1210,31 +1142,14 @@ void applyHGT2(double**ref,struct InputTree * aTree,int i,int j){
     }
   	
 	
-	//printf("\ndemi-branche = %lf",tailleBrancheSource);
 	kt = aTree->kt;
 	//printf("\navant load");
 	
-  //ComputeNewDistances(DIST,aTree->ADD,aTree->size,aTree->kt,nouveauNoeud,tailleBrancheSource,tailleTransfert,Ssup,Sinf,Sdestination);
   approx_arb(ref,aTree->ADD,aTree->ADD,aTree->W,&iternumber,aTree->ARETE,aTree->LONGUEUR,1,&kt,0,aTree->size);
   loadAdjacenceMatrix(aTree->Adjacence,aTree->ARETE, aTree->LONGUEUR,aTree->size, aTree->kt);
-  /*
-	for(int i=1;i<=2*(aTree->size)-3-aTree->kt;i++){
-		aTree->Adjacence[aTree->ARETE[2*i-1]][aTree->ARETE[2*i-2]] = aTree->Adjacence[aTree->ARETE[2*i-2]][aTree->ARETE[2*i-1]] = aTree->LONGUEUR[i-1];
-	}*/
-	//printf("\navant approx");
+  
   Floyd(aTree->Adjacence,aTree->ADD,aTree->size,aTree->kt);
 
-/*
-printf("\n\nFin de ApplyHGT : %d,kt=%d\n",aTree->size,aTree->kt);
-	for(i=1;i<=2*aTree->size-2-aTree->kt;i++){
-		printf("\n%d ",i);
-		for(j=1;j<=2*aTree->size-2-aTree->kt;j++){
-			printf("%.2lf ",aTree->ADD[i][j]);
-		}
-	}*/
-	//printf("\nfin apply");
-
-  
   //== Liste des noeuds sous
 
 
