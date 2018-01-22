@@ -13,7 +13,7 @@ if( scalar @ARGV < 0){
     exit 0;
 }
 
-my $cmd = "hgt3.4 ";
+my $cmd = "./hgt3.4 ";
 my $inputfile = "";
 my $outputfile="output.txt";
 my $bootstrap = "no";
@@ -110,7 +110,7 @@ foreach my $elt (@ARGV){
 my $inputfile_bkp = $inputfile;
 $inputfile    = "$path" . "$inputfile";
 $outputfile = "$path" . "$outputfile";
-$cmd          = "/Users/boc_a/hgt-detection/" . $cmd;
+$cmd          = "" . $cmd;
 #$cmd          = "usagers/" . $cmd;
 my $results   = "$path" . "results.txt";
 my $firstResults   = "$path" . "firstResults.txt";
@@ -527,7 +527,7 @@ if( ($generoot eq "file") && ( ! -e $generootfile && ! -e $generootfileBranches)
 
 if ($bootstrap eq "yes")
 {
-	# On recopie les premiers résultats sauvegardés.
+	# On recopie les premiers rÃ©sultats sauvegardÃ©s.
 	copy($firstResults, $results) or die "File cannot be copied.";
 	copy($firstOutputWeb, $outputWeb) or die "File cannot be copied.";
 	copy($firstResults2, $results2) or die "File cannot be copied.";
