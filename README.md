@@ -34,7 +34,7 @@ With Linux/UNIX, you need to compile the following files in order to create the 
  |-> Makefile
  
 To do it, carry out the command:
- > make hgt
+ > make hgt3.4
 
 
 ####2) How to call the HGT-DETECTION program
@@ -93,7 +93,7 @@ If the species and (or) gene tree(s) are not rooted, the root position(s) can be
     J A
 Example of a command line call with this option: 
 
-    perl run_hgt.pl -inputfile=Input_7_taxa.txt -outputfile=output.txt -speciesroot=file
+    perl run_hgt3.4.pl -inputfile=Input_7_taxa.txt -outputfile=output.txt -speciesroot=file
 
  
 ####6) Output file example
