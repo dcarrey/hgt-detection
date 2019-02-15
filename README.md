@@ -1,7 +1,7 @@
 HGT Detection 3.4 - March, 2012
 --
 
-###Citation
+#Citation
 
 If you use this program in a publication, please cite the following reference:	
 Boc, A., Philippe, H. and Makarenkov, V. (2010), Inferring and validating horizontal gene transfer events using bipartition dissimilarity, Systematic Biology.
